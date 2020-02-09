@@ -2,10 +2,6 @@
 #define rep(i,n) for (int i = 0; i < (n); ++i)
 #define pa(x,n) for(ll i=0;i<n;i++){cout<<(x[i])<<" \n"[i==n-1];};
 #define pb push_back
-#define fi first
-#define be begin()
-#define en end()
-#define se second
 
 using ll = long long;
 using namespace std;
@@ -15,7 +11,7 @@ const int INFint = 1e9;
 const ll INFll = 1e18;
 ll MOD=1e9+7;
 
-ll gcd(ll a, ll b) { return b?gcd(b,a%b):a; } //最大公約数
+ll gcd(ll a, ll b) { return __gcd(a,b); } //最大公約数
 ll lcm(ll a, ll b) { return a/gcd(a,b)*b; } //最大公倍数
 
 // aのn乗をMODで割りながら計算する
@@ -35,9 +31,6 @@ ll modinv(ll a) {
 }
 
 int main(){
-  int N,A[(int)2e5];
-  cin>>N;
-  for (int i(0);i<N;i++) cin>>A[i];
   return 0;
 }
 
