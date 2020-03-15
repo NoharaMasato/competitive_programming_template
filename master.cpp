@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-#define rep(i,n) for (int i = 0; i < (n); ++i)
+#define rep(i,n) for (int i=0; i<(n); ++i)
+#define REP(i,n) for(int i=1;i<=(n);++i)
 #define pa(x,n) for(ll i=0;i<n;i++){cout<<(x[i])<<" \n"[i==n-1];};
 #define pb push_back
 
