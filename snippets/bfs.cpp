@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+using ll = long long;
+using namespace std;
+
 // start
 queue <pair<int,int>> q;
 q.push({sx-1,sy-1});

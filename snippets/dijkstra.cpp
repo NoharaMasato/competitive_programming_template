@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+using ll = long long;
+using namespace std;
+
 // start
 #define MAX_N 100
 int N;

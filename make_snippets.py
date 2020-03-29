@@ -15,12 +15,12 @@ with open('snippets.json') as f:
         with open('snippets/'+file_name, encoding='utf-8') as f:
             flag = False
             for line in f:
+                if line[:-1] == "// end":
+                    break
                 if flag:
                     snippet_content.append(line[:-1])
                 if line[:-1] == "// start":
                     flag = True
-                elif line[:-1] == "// end":
-                    break
         snippet["body"] = snippet_content
         snippet["description"] = snippet_meta["description"]
         snippets[name] = snippet
