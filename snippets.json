@@ -1,0 +1,22 @@
+{
+  "snippets":[
+    {
+      "name": "unionfine",
+      "prefix": "uf",
+      "snippets_file": "UnionFind.cpp",
+      "description": "unionfind"
+    },
+    {
+      "name": "bfs",
+      "prefix": "bfs",
+      "snippets_file": "bfs.cpp",
+      "description": "unionfind"
+    },
+    {
+      "name": "dijkstra",
+      "prefix": "dik",
+      "snippets_file": "dijkstra.cpp",
+      "description": "unionfind"
+    }
+  ]
+}

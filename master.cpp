@@ -8,8 +8,8 @@ using ll = long long;
 using namespace std;
 using pint = pair<int,int>;
 using pll = pair<ll,ll>;
-const int INFint = 1e9;
-const ll INFll = 1e18;
+const int INFint = 2e9+1;
+const ll INFll = 2e18+1;
 ll MOD=1e9+7;
 
 ll gcd(ll a, ll b) { return __gcd(a,b); } //最大公約数
