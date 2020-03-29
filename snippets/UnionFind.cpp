@@ -1,3 +1,4 @@
+// start
 struct UnionFind{
   vector<int> par;
 
@@ -20,3 +21,4 @@ struct UnionFind{
     return root(x)==root(y);
   }
 };
+// end

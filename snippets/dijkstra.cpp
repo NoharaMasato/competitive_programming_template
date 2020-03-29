@@ -1,3 +1,4 @@
+// start
 #define MAX_N 100
 int N;
 int d[MAX_N]; //各頂点の最小値を入れる配列
@@ -24,3 +25,5 @@ void dijkstra(int s){ //頂点sからの最短距離を配列dに入れる
     }
   }
 }
+
+//end

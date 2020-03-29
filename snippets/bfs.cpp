@@ -1,3 +1,4 @@
+// start
 queue <pair<int,int>> q;
 q.push({sx-1,sy-1});
 
@@ -18,4 +19,4 @@ while(!q.empty()){
     q.push(next);
   }
 }
-
+// end

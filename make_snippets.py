@@ -1,5 +1,6 @@
 import json
 import codecs
+import subprocess
 
 snippets = {}
 with open('snippets.json') as f:
@@ -12,14 +13,19 @@ with open('snippets.json') as f:
         snippet["prefix"] = snippet_meta["prefix"]
         snippet_content = []
         with open('snippets/'+file_name, encoding='utf-8') as f:
+            flag = False
             for line in f:
-                snippet_content.append(line[:-1])
-                print(line[:-1])
+                if flag:
+                    snippet_content.append(line[:-1])
+                if line[:-1] == "// start":
+                    flag = True
+                elif line[:-1] == "// end":
+                    break
         snippet["body"] = snippet_content
         snippet["description"] = snippet_meta["description"]
         snippets[name] = snippet
-with open('snippets_output.json', 'w', encoding='utf-8') as f:
+
+with open("output_snippets.json", 'w', encoding='utf-8') as f:
     json.dump(snippets, f, indent=2, ensure_ascii=False)
-# file = codecs.open("snippets_output.json", "w", "utf-8")
-# file.write(snippets)
-# file.close()
+
+subprocess.call(["bash", "mv_snippets.sh"])
