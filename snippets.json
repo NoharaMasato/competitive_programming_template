@@ -17,6 +17,12 @@
       "prefix": "dik",
       "snippets_file": "dijkstra.cpp",
       "description": "unionfind"
+    },
+    {
+      "name": "dfs",
+      "prefix": "dfs",
+      "snippets_file": "dfs.cpp",
+      "description": "dfs"
     }
   ]
 }
