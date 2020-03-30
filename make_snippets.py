@@ -12,7 +12,7 @@ with open('snippets.json') as f:
         file_name = snippet_meta["snippets_file"]
         snippet["prefix"] = snippet_meta["prefix"]
         snippet_content = []
-        with open('snippets/'+file_name, encoding='utf-8') as f:
+        with open('libs/'+file_name, encoding='utf-8') as f:
             flag = False
             for line in f:
                 if line[:-1] == "// end":
