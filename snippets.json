@@ -16,6 +16,11 @@
       "snippets_file": "vector.json"
     },
     {
+      "type" : "json",
+      "name": "ruisekiwa",
+      "snippets_file": "ruiseki.json"
+    },
+    {
       "type" : "cpp",
       "name": "unionfine",
       "prefix": "uf",

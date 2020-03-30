@@ -1,0 +1,11 @@
+{
+  "prefix": "ruiseki",
+  "body": [
+    "// N要素の累積和 [i,j]の和 r[j+1]-r[i]",
+    "vector<int> r(N+1,0);",
+    "for(int i(0);i<N;i++){",
+    "  r[i+1] = r[i] + $1[i];",
+    "}"
+  ],
+  "description": "for snippet"
+}
