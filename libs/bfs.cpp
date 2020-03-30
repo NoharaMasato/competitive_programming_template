@@ -3,25 +3,43 @@
 using ll = long long;
 using namespace std;
 
-// start
-queue <pair<int,int>> q;
-q.push({sx-1,sy-1});
-
-while(!q.empty()){
-  pair<int,int> now = q.front();
-  q.pop();
-  if (s[now.second][now.first]=='#') continue;
-  //cout << now.first << " " << now.second<< endl;
-  s[now.second][now.first]='#';
-  for (int i(0);i<4;i++){
-    pair<int,int> next = {now.first + nlx[i],now.second+nly[i]};
-    if (next.first < 0 || next.first >= C || next.second < 0 || next.second >= R) continue; //ここでは次のマスに進めるかどうかを見ていない。
-    cnt[next.second][next.first] = cnt[now.second][now.first]+1;
-    if (next.first == gx - 1 && next.second == gy - 1){
-      cout << cnt[next.second][next.first] << endl;
-      return 0;
+int main(){
+  int H,W;
+  string s[500];
+  cin>>H>>W;
+  int sx,sy;
+  for (int i(0);i<H;i++) cin>>s[i];
+  for (int h(0);h<H;h++){
+    for (int w(0);w<W;w++){
+      if (s[h][w] == 's'){
+        sy = h;
+        sx = w;
+      }
     }
-    q.push(next);
   }
-}
+
+// start
+  // sx ,sy : start
+  int nx[] = {1,-1,0,0};
+  int ny[] = {0,0,-1,1};
+  queue <pair<int,int>> q;
+  q.push({sy,sx});
+  s[sy][sx] = '#';
+  while(!q.empty()){
+    pair<int,int> now = q.front();q.pop();
+    for (int i(0);i<4;i++){
+      pair<int,int> next = {now.first + ny[i],now.second+nx[i]};
+      if (next.first < 0 || next.first >= H || next.second < 0 || next.second >= W) continue;
+      if (s[next.first][next.second] != '#'){
+        q.push(next);
+        if (s[next.first][next.second] == 'g'){
+          cout << "Yes" << endl;
+          return 0;
+        }
+        s[next.first][next.second]='#';
+      }
+    }
+  }
+  cout << "No" << endl;
 // end
+}
