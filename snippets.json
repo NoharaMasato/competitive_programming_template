@@ -31,21 +31,21 @@
       "type" : "cpp",
       "name": "bfs",
       "prefix": "bfs",
-      "snippets_file": "bfs.cpp",
+      "snippets_file": "BFS.cpp",
       "description": "unionfind"
     },
     {
       "type" : "cpp",
       "name": "dijkstra",
       "prefix": "dik",
-      "snippets_file": "dijkstra.cpp",
+      "snippets_file": "Dijkstra.cpp",
       "description": "unionfind"
     },
     {
       "type" : "cpp",
       "name": "dfs",
       "prefix": "dfs",
-      "snippets_file": "dfs.cpp",
+      "snippets_file": "DFS.cpp",
       "description": "dfs"
     }
   ]
