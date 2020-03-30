@@ -1,0 +1,13 @@
+{
+  "prefix": "cvi",
+  "body": [
+    "int N;",
+    "cin>>N;",
+    "vector<int> A(N);",
+    "for(int i(0);i<N;i++) cin>>A[i];",
+    "for(int i(0);i<N;i++){",
+    "  $1",
+    "}"
+  ],
+  "description": "for snippet"
+}

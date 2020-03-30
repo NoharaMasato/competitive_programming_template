@@ -1,24 +1,43 @@
 {
   "snippets":[
     {
+      "type" : "json",
+      "name": "for",
+      "snippets_file": "for.json"
+    },
+    {
+      "type" : "json",
+      "name": "input",
+      "snippets_file": "input.json"
+    },
+    {
+      "type" : "json",
+      "name": "vector",
+      "snippets_file": "vector.json"
+    },
+    {
+      "type" : "cpp",
       "name": "unionfine",
       "prefix": "uf",
       "snippets_file": "UnionFind.cpp",
       "description": "unionfind"
     },
     {
+      "type" : "cpp",
       "name": "bfs",
       "prefix": "bfs",
       "snippets_file": "bfs.cpp",
       "description": "unionfind"
     },
     {
+      "type" : "cpp",
       "name": "dijkstra",
       "prefix": "dik",
       "snippets_file": "dijkstra.cpp",
       "description": "unionfind"
     },
     {
+      "type" : "cpp",
       "name": "dfs",
       "prefix": "dfs",
       "snippets_file": "dfs.cpp",

@@ -1,33 +1,35 @@
 #include <bits/stdc++.h>
 using ll = long long;
 using namespace std;
+#define INFint 1e9+7
 
 // start
-#define MAX_N 100
-int N;
-int d[MAX_N]; //各頂点の最小値を入れる配列
-struct edge {int to,cost;};
-vector<edge> G[MAX_N];
 
-void dijkstra(int s){ //頂点sからの最短距離を配列dに入れる
-  priority_queue<P,vector<P>,greater<P>> q;//値を小さい順に出すpairは一つ目がコスト、２つ目が頂点番号
-  fill(d,d+N,INF);
+int main(){
+// start
+  struct edge {int to,cost;};
+  int N;
+  cin>>N;
+  vector<vector<edge>> G(N,vector<edge>());
+
+  vector<int> d(N); //各頂点の最小値を入れる配列
+  // first: cont, second: node number 
+  priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
+
   d[s] = 0;
-  q.push(P(0,s));
+  q.push({0,s});
 
   while(!q.empty()){
-    P p = q.top();q.pop();
+    pair<int,int> p = q.top();q.pop();
     int v = p.second;
     if (d[v] < p.first) continue;
-    for (int i(0);i<G[v].size();i++){
+    for (int i(0);i<int(G[v].size());i++){
       edge e = G[v][i];
       if (d[e.to] > d[v] + e.cost){
-        cout << e.to << "番目の頂点を" << d[e.to] << "から" << d[v] + e.cost << "に変更しました" << endl;
         d[e.to] = d[v] + e.cost;
-        q.push(P(d[e.to],e.to));
+        q.push({d[e.to],e.to});
       }
     }
   }
-}
-
 //end
+}
