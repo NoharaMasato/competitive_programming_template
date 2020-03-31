@@ -1,0 +1,16 @@
+{
+  "prefix": "cvic",
+  "body": [
+    "void solve(){",
+    "  $1",
+    "}",
+    "int main(){",
+    "  int t;",
+    "  cin>>t;",
+    "  for(int i(0);i<t;i++){",
+    "    solve();",
+    "  }",
+    "}"
+  ],
+  "description": "for snippet"
+}

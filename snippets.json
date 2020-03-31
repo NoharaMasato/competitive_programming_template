@@ -21,6 +21,11 @@
       "snippets_file": "ruiseki.json"
     },
     {
+      "type" : "json",
+      "name": "codeforce",
+      "snippets_file": "codeforce.json"
+    },
+    {
       "type" : "cpp",
       "name": "unionfine",
       "prefix": "uf",
