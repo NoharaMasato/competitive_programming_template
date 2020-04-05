@@ -26,6 +26,21 @@
       "snippets_file": "codeforce.json"
     },
     {
+      "type" : "json",
+      "name": "yes",
+      "snippets_file": "yes.json"
+    },
+    {
+      "type" : "json",
+      "name": "no",
+      "snippets_file": "no.json"
+    },
+    {
+      "type" : "json",
+      "name": "yes_no",
+      "snippets_file": "yes_no.json"
+    },
+    {
       "type" : "cpp",
       "name": "unionfine",
       "prefix": "uf",
@@ -52,6 +67,13 @@
       "prefix": "dfs",
       "snippets_file": "DFS.cpp",
       "description": "dfs"
+    },
+    {
+      "type" : "cpp",
+      "name": "binary_all_search",
+      "prefix": "bas",
+      "snippets_file": "BinaryAllSearch.cpp",
+      "description": "binary_all_search"
     }
   ]
 }
