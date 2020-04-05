@@ -1,0 +1,7 @@
+{
+  "prefix": "no",
+  "body": [
+    "cout << \"No\" << endl;"
+  ],
+  "description": "no"
+}

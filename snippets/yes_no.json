@@ -1,0 +1,11 @@
+{
+  "prefix": "yn",
+  "body": [
+    "if(flag){",
+    "  cout << \"Yes\" << endl;",
+    "}else{",
+    "  cout << \"No\" << endl;",
+    "}"
+  ],
+  "description": "yes_no"
+}

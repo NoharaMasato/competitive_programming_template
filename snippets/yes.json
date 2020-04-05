@@ -1,0 +1,7 @@
+{
+  "prefix": "yes",
+  "body": [
+    "cout << \"Yes\" << endl;"
+  ],
+  "description": "yes"
+}
