@@ -74,6 +74,13 @@
       "prefix": "bas",
       "snippets_file": "BinaryAllSearch.cpp",
       "description": "binary_all_search"
+    },
+    {
+      "type" : "cpp",
+      "name": "binary_search",
+      "prefix": "bs",
+      "snippets_file": "BinarySearch.cpp",
+      "description": "binary_search"
     }
   ]
 }
