@@ -1,7 +1,8 @@
 {
   "prefix": "vec2",
   "body": [
-    "vector<vector<$1>> $2(H,vector<$1>(W,$3);"    
+    "vector<vector<$1>> $2(H,vector<$1>(W,$3));"    
   ],
   "description": "double vector"
 }
+
