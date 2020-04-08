@@ -81,6 +81,13 @@
       "prefix": "bs",
       "snippets_file": "BinarySearch.cpp",
       "description": "binary_search"
+    },
+    {
+      "type" : "cpp",
+      "name": "next_permutation",
+      "prefix": "np",
+      "snippets_file": "NextPermutation.cpp",
+      "description": "next_permutation"
     }
   ]
 }
