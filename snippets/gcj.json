@@ -1,0 +1,18 @@
+{
+  "prefix": "gcj",
+  "body": [
+    "void solve(int num){",
+    "  int ans(0);",
+    "  $1",
+    "  cout << \"Case #\" << num << \": \" << ans << endl;",
+    "}",
+    "int main(){",
+    "  int t;",
+    "  cin>>t;",
+    "  for(int i(0);i<t;i++){",
+    "    solve(i+1);",
+    "  }",
+    "}"
+  ],
+  "description": "for snippet"
+}

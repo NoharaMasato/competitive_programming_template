@@ -41,6 +41,11 @@
       "snippets_file": "yes_no.json"
     },
     {
+      "type" : "json",
+      "name": "gcj",
+      "snippets_file": "gcj.json"
+    },
+    {
       "type" : "cpp",
       "name": "unionfine",
       "prefix": "uf",
