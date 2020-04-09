@@ -46,6 +46,11 @@
       "snippets_file": "gcj.json"
     },
     {
+      "type" : "json",
+      "name": "gcd,lcm",
+      "snippets_file": "gcd_lcm.json"
+    },
+    {
       "type" : "cpp",
       "name": "unionfine",
       "prefix": "uf",

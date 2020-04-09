@@ -1,0 +1,8 @@
+{
+  "prefix": "gcdlcm",
+  "body": [
+    "ll gcd(ll a, ll b) { return __gcd(a,b); } //最大公約数",
+    "ll lcm(ll a, ll b) { return a/gcd(a,b)*b; } //最小公倍数"
+  ],
+  "description": "gcd,lcm"
+}
