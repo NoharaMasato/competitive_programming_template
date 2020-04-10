@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/abc157/tasks/abc157_d
+// https://judge.yosupo.jp/problem/unionfind
 
 #include <bits/stdc++.h>
 using ll = long long;
@@ -30,28 +30,18 @@ struct UnionFind{
 // end
 
 int main() {
-  int N,M,K; cin>>N>>M>>K;
+  int N,Q;
+  cin>>N>>Q;
   UnionFind uf=UnionFind(N);
-  vector<int> root_cnt(N,0),friend_cnt(N,0),bad_cnt(N,0);
-  int a,b;
-  for (int i = 0; i < M; ++i) {
-    cin>>a>>b; --a; --b;
-    uf.unite(a,b);
-    friend_cnt[a]++; friend_cnt[b]++;
-  }
-  for(int i=0;i<N;++i){
-    root_cnt[uf.root(i)]++;
-  }
-  for (int i = 0; i < K; ++i) {
-    cin>>a>>b; --a; --b;
-    if(uf.sameroot(a,b)){
-      bad_cnt[a]++;
-      bad_cnt[b]++;
+  for(int i(0);i<Q;i++){
+    int t,u,v;
+    cin>>t>>u>>v;
+    if(t == 0){
+      uf.unite(u,v);
+    }else if(t == 1){
+      if(uf.sameroot(u,v)) cout << 1 << endl;
+      else cout << 0 << endl;
     }
   }
-  for (int i = 0; i < N; ++i) {
-    cout<<root_cnt[uf.root(i)]-1-friend_cnt[i]-bad_cnt[i]<<" ";
-  }
-  cout<<endl;
   return 0;
 }
