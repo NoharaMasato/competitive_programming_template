@@ -1,0 +1,11 @@
+{
+  "prefix": "fo2",
+  "body": [
+    "for(int $1(0);$1<$2;$1++){",
+    "  for(int $3(0);$3<$4;$3++){",
+    "    $5",
+    "  }",
+    "}"
+  ],
+  "description": "double for snippet"
+}

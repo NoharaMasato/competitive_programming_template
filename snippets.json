@@ -7,6 +7,11 @@
     },
     {
       "type" : "json",
+      "name": "for2",
+      "snippets_file": "for2.json"
+    },
+    {
+      "type" : "json",
       "name": "input",
       "snippets_file": "input.json"
     },
@@ -98,6 +103,13 @@
       "prefix": "np",
       "snippets_file": "NextPermutation.cpp",
       "description": "next_permutation"
+    },
+    {
+      "type" : "cpp",
+      "name": "range minimum query",
+      "prefix": "rmq",
+      "snippets_file": "RMQ.cpp",
+      "description": "range minimum query"
     }
   ]
 }
