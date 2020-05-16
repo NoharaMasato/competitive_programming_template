@@ -8,6 +8,7 @@ import (
 )
 
 func fetch_testcase(url string, problem string) {
+  fmt.Print("fetch testcase\n")
 	doc, err := goquery.NewDocument(url)
 	if err != nil {
 		fmt.Print("url scarapping failed")
@@ -28,7 +29,8 @@ func fetch_testcase(url string, problem string) {
 
 func main() {
   word := os.Args[1]
-  url := "https://atcoder.jp/contests/abc167/tasks/abc167_" + word
+  contest_name := "abc167"
+  url := "https://atcoder.jp/contests/" + contest_name + "/tasks/" + contest_name + "_" + word
   fetch_testcase(url,word)
 }
 

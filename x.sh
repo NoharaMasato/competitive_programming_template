@@ -11,7 +11,7 @@ fi
 
 for input in $inputs; do
   output=$1/outputs/$cnt.txt
-  # cat $input
+  cat $input
   diff <(./a.out < ./$input) <(cat $output) > /dev/null 2>&1
   if [ $? -eq 0 ]; then
     echo  $'\e[32mAC\e[0m'
