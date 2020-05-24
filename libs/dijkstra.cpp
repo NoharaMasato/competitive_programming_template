@@ -3,10 +3,7 @@
 using ll = long long;
 using namespace std;
 
-#define INFint 2e9+1
-
-ll gcd(ll a, ll b) { return __gcd(a,b); } //最大公約数
-ll lcm(ll a, ll b) { return a/gcd(a,b)*b; } //最大公倍数
+#define INFint 1e9+1
 
 int main(){
 // start
@@ -34,7 +31,6 @@ int main(){
   while(!q.empty()){
     pair<int,int> p = q.top();q.pop();                                                  
     int v = p.second;
-    if (d[v] < p.first) continue;
     for (int i(0);i<int(G[v].size());i++){
       edge e = G[v][i];
       if (d[e.to] > d[v] + e.cost){
