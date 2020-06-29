@@ -1,3 +1,4 @@
+// https://atcoder.jp/contests/past201912-open/tasks/past201912_k
 #include <bits/stdc++.h>
 
 using ll = long long;

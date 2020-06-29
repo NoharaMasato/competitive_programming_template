@@ -20,8 +20,7 @@ int main(){
       G[k].push_back({v,c});
     }
   }
-  vector<int> d(N); //各頂点の最小値を入れる配列
-  fill(d.begin(),d.end(),INFint);
+  vector<int> d(N,INFint); //各頂点の最小値を入れる配列
   // first: cont, second: node number 
   priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
   int start = 0;
