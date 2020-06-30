@@ -39,6 +39,7 @@ T countDivisors(T n){
 }
 
 // 約数列挙
+template <typename T>
 vector<T> divisor(T n){
   vector<T> res;
   for (T i(1);i*i<=n;i++){
@@ -58,5 +59,12 @@ int main(){
   for(auto mi:p) cout << mi.first << " " << mi.second << endl;
 
   cout << isprime(333335) << " " << isprime(37) << endl;
+
+  cout << countDivisors(12) << endl;
+
+  vector<int> t = divisor(12);
+  for(auto ti:t) cout << ti << " ";
+  cout << endl;
+
   return 0;
 }
