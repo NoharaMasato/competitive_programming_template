@@ -26,6 +26,7 @@ bool isprime(T n) {
   return true;
 }
 
+// 約数の個数カウント
 template <typename T>
 T countDivisors(T n){
   T cnt = 0;
