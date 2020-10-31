@@ -74,7 +74,6 @@ int main(){
     }
     ll ans(0);
     for(int i(200000);i>=0;i--){
-      //cout << dp[N][i] << " ";
       if(dp[N][i] <= W){
         ans = i;
         break;

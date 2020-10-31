@@ -7,7 +7,7 @@ const int INFint = 1e9+1;
 const ll INFll = (ll)1e18+1;
 ll MOD=1e9+7;
 
-
+// SとS[i:|S|-1]の最大共通接頭辞の長さ(i:0~|S|-1)をO(N)で求める
 int main(){
   string s;
   cin>>s;
