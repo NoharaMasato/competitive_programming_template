@@ -12,7 +12,7 @@ int main(){
   string s;
   cin>>s;
   int N = int(s.size());
-  vector<int> A(N);
+  vector<int> A(N); //共通接頭辞の長さをいれる配列(A[i]はSとS[i:S-1]の共通接頭辞の長さ)
   A[0] = N;
   int i = 1, j = 0;
   while (i < N) {
@@ -29,4 +29,3 @@ int main(){
   cout << endl;
   return 0;
 }
-
