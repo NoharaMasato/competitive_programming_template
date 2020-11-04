@@ -1,4 +1,5 @@
-//https://github.com/atcoder/live_library/blob/master/bit.cpp
+// https://judge.yosupo.jp/problem/point_add_range_sum
+//https://github.com/atcoder/live_library/blob/master/bit.cpp (コード参考)
 #include <bits/stdc++.h>
 
 using ll = long long;
@@ -7,32 +8,49 @@ const int INFint = 1e9+1;
 const ll INFll = (ll)1e18+1;
 ll MOD=1e9+7;
 
+template<typename T>
 struct BIT {
   int n;
-  vector<int> d;
+  vector<T> d;
   BIT(int n=0):n(n),d(n+1) {}
-  void add(int i, int x=1) {
+  void add(int i, T x=1) {
     for (i++; i <= n; i += i&-i) {
       d[i] += x;
     }
   }
-  int sum(int i) {
-    int x = 0;
+  T sum(int i) {
+    T x = 0;
     for (i++; i; i -= i&-i) {
       x += d[i];
     }
     return x;
   }
-  int sum(int l, int r) {
+  T sum(int l, int r) { // 
     return sum(r-1) - sum(l-1);
   }
 };
 
 int main(){
-	BIT bit(10);
-  cout << bit.sum(1,2) << endl;
-  bit.add(1,4);
-  cout << bit.sum(1,2) << endl;
+  int N,Q;
+  cin>>N>>Q;
+	BIT<ll> bit(N);
+  for(int i(0);i<N;i++){
+    ll a;
+    cin>>a;
+    bit.add(i,a);
+  }
+  for(int i(0);i<Q;i++){
+    int x;
+    cin>>x;
+    if(x == 0){
+      ll p,x;
+      cin>>p>>x; // a[p] += x
+      bit.add(p,x);
+    }else if(x == 1){
+      int l,r;
+      cin>>l>>r;
+      cout << bit.sum(l,r) << endl;
+    }
+  }
   return 0;
 }
-
