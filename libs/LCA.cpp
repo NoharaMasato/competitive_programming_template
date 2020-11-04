@@ -41,12 +41,13 @@ int lca(int u, int v){ //uとvのlca
   }
   return parent[0][u];
 }
+
 int main(){
   cin>>N;
   for(int i(0);i<N;i++){
     int p;
     cin>>p;
-    if(p == -1){
+    if(p == -1){ //親が-1のものは木の根となる
       root = i;
     }else{
       p--;
