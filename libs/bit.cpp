@@ -1,5 +1,6 @@
 // https://judge.yosupo.jp/problem/point_add_range_sum
 //https://github.com/atcoder/live_library/blob/master/bit.cpp (コード参考)
+// feneck treeとも呼ばれる
 #include <bits/stdc++.h>
 
 using ll = long long;
