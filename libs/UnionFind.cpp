@@ -4,6 +4,8 @@
 using ll = long long;
 using namespace std;
 
+// union findの計算量工夫方法として経路圧縮とランクが大きい方につなげるという二つがあり、これを両方することで
+// 一回の計算量がアッカーマンの逆関数になる。これはランクしか行っていない
 // start
 struct UnionFind{
   vector<int> par;
