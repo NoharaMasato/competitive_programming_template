@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// start
 template<int MOD> struct Fp {
   long long val;
   constexpr Fp(long long v = 0) noexcept : val(v % MOD) {
@@ -57,10 +58,8 @@ template<int MOD> struct Fp {
     return t;
   }
 };
-
-
-const int MOD = 1000000007;
 using mint = Fp<MOD>;
+// end
 
 int main() {
   mint a = 423343;

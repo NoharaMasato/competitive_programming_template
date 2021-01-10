@@ -110,6 +110,13 @@
       "prefix": "rmq",
       "snippets_file": "RMQ.cpp",
       "description": "range minimum query"
+    },
+    {
+      "type" : "cpp",
+      "name": "modint",
+      "prefix": "modint",
+      "snippets_file": "modint.cpp",
+      "description": "modint"
     }
   ]
 }

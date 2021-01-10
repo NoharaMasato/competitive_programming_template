@@ -1,5 +1,4 @@
 import json
-import codecs
 import subprocess
 
 snippets = {}
@@ -35,5 +34,5 @@ with open('snippets.json') as f:
 with open("output_snippets.json", 'w', encoding='utf-8') as f:
     json.dump(snippets, f, indent=2, ensure_ascii=False)
 
+# ディレクトリにスペースが入ってると、なぜかpythonでmvできないのでshell scriptを呼んでいる
 subprocess.call(["bash", "mv_snippets.sh"])
-
