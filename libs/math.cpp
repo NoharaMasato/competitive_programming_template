@@ -52,6 +52,19 @@ vector<T> divisor(T n){
   return res;
 }
 
+// ax + by = gcd(a, b) を満たす (x, y) が格納される(dは計算途中に使っているだけ)
+// 一次不定方程式 ax + by = cの解(x,y)が存在する必要十分条件はc%gcd(a,b) = 0であること(つまり、cがaとbの最大公約数の倍数であること)
+ll extGCD(ll a, ll b, ll &x, ll &y) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    ll d = extGCD(b, a%b, y, x);
+    y -= a/b * x;
+    return d;
+}
+
 int main(){
   map<int,int> m = prime_factor(100000);
   for(auto mi:m) cout << mi.first << " " << mi.second << endl;
