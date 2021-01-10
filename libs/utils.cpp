@@ -2,7 +2,7 @@
 using ll = long long;
 using namespace std;
 
-// abs(A[i]-x) [i:0-|A|-1]が最小のもののindexを返す（つまりはAの要素の中で、xに最も近い値のindexを返す)
+// abs(A[i]-x) [i:0~|A|-1]が最小のもののindexを返す（つまりはAの要素の中で、xに最も近い値のindexを返す)
 // (注) Aは昇順にソート済みであるべき
 int nearest(vector<int> A, int x){
   int N = int(A.size());

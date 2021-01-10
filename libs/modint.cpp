@@ -3,6 +3,7 @@
 using namespace std;
 
 // start
+// constexprを使っているのでMODを動的に決めることはできない
 template<int MOD> struct Fp {
   long long val;
   constexpr Fp(long long v = 0) noexcept : val(v % MOD) {
@@ -50,6 +51,7 @@ template<int MOD> struct Fp {
   friend constexpr ostream& operator << (ostream &os, const Fp<MOD>& x) noexcept {
     return os << x.val;
   }
+  // friend関数なので、引数を入れると勝手に呼ばれる
   friend constexpr Fp<MOD> modpow(const Fp<MOD> &a, long long n) noexcept { // aのn乗(オーダーlog(n)で計算できる)
     if (n == 0) return 1;
     auto t = modpow(a, n / 2);
