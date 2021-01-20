@@ -30,6 +30,7 @@ int main(){
   while(!q.empty()){
     pair<int,int> p = q.top();q.pop();                                                  
     int v = p.second;
+    if(d[v] < p.first) continue;
     for (int i(0);i<int(G[v].size());i++){
       edge e = G[v][i];
       if (d[e.to] > d[v] + e.cost){
