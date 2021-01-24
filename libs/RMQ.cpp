@@ -22,7 +22,7 @@ public:
 
     // 最下段に値を入れたあとに、下の段から順番に値を入れる
     // 値を入れるには、自分の子の 2 値を参照すれば良い
-    for(int i=0; i<sz; i++) node[i+n-1] = v[i];
+    for(int i=0; i<sz; i++) node[i+n-1] = v[i]; // 配列そのままが入るのはindex n-1から
     for(int i=n-2; i>=0; i--) node[i] = min(node[2*i+1], node[2*i+2]);
   }
   void update(int x, int val) {
