@@ -12,6 +12,11 @@
     },
     {
       "type" : "json",
+      "name": "for_reverse",
+      "snippets_file": "for_reverse.json"
+    },
+    {
+      "type" : "json",
       "name": "input",
       "snippets_file": "input.json"
     },
