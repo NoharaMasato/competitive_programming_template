@@ -26,7 +26,7 @@ struct BIT {
     }
     return x;
   }
-  T sum(int l, int r) { // 
+  T sum(int l, int r) { // r-1からlの和を求める
     return sum(r-1) - sum(l-1);
   }
 };

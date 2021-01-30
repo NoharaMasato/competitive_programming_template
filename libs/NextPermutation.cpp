@@ -3,7 +3,7 @@ using ll = long long;
 using namespace std;
 
 int main(){
-  int N = 3;
+  int N = 3; // O(N!)
 // start
   /* 0 1 2 
      0 2 1
