@@ -49,7 +49,7 @@ int main(){
       bit.add(p,x);
     }else if(x == 1){
       int l,r;
-      cin>>l>>r;
+      cin>>l>>r; // sum [l, r) 半開区間
       cout << bit.sum(l,r) << endl;
     }
   }

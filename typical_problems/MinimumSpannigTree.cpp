@@ -15,7 +15,6 @@ int main(){
     G[s].push_back({w,t});
     G[t].push_back({w,s});
   }
-//start
   priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;// cost,to
   q.push({0,1});
   vector<bool> visited(V+1,false);
@@ -31,7 +30,6 @@ int main(){
     }
   }
   cout << sum << endl;
-//end
   return 0;
 }
 
