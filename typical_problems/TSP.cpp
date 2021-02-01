@@ -2,13 +2,15 @@
 // 回答参考　http://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=2020816
 #include <bits/stdc++.h>
 using ll = long long;
+const int INFint = 1e9+1;
+const ll INFll = (ll)1e18+1;
 using namespace std;
 
 int main(){
   int V,E;
   cin>>V>>E;
   // dpは一個目が現在の通ったところのbit情報、２個目が現在の位置
-  vector<vector<int>> dp(1<<V,vector<int>(V,1e9)), dst(V, vector<int>(V, 1e9));
+  vector<vector<int>> dst(V, vector<int>(V, INFint));
   for(int i(0);i<E;i++){ //有向グラフなので、いけないパターンが存在する
     int s,t,d;
     cin>>s>>t>>d;
@@ -19,6 +21,7 @@ int main(){
     for(int i(0);i<V;i++) dp[1<<i][i] = 0; // と初期化する(全ての１点目は距離0でいけるという意味)
     // 答えは for(int i(0);i<V;i++) ans = min(ans, dp[(1<<V)-1][i]); // となる
   */
+  vector<vector<int>> dp(1<<V,vector<int>(V,INFint));
   int start = 0;
   dp[0][start] = 0; // 頂点0をスタートとする(どこも通っていない状態で0にいる)
   for(int i(1);i<(1<<V);i++){
@@ -30,7 +33,7 @@ int main(){
       }
     }
   }
-  if(dp[(1<<V)-1][start] == 1e9) cout << -1 << endl; //1111....が初めの点をスタート時を含めて２回通った状態で頂点startにいる状況
+  if(dp[(1<<V)-1][start] == INFint) cout << -1 << endl; //1111....が初めの点をスタート時を含めて２回通った状態で頂点startにいる状況
   else cout << dp[(1<<V)-1][start] << endl;
   return 0;
 }
