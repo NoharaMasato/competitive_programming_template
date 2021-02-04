@@ -12,14 +12,14 @@ struct BIT {
   vector<T> d;
   BIT(int n=0):n(n),d(n+1) {}
   void add(int i, T x=1) {
-    for (i++; i <= n; i += i&-i) {
-      d[i] += x;
+    for (int idx(i+1); idx <= n; idx += idx&-idx) { // iを２進数にした時の、最下位に立っているbitに１を足す
+      d[idx] += x;
     }
   }
   T sum(int i) {
     T x = 0;
-    for (i++; i; i -= i&-i) {
-      x += d[i];
+    for (int idx(i+1); idx > 0; idx -= idx&-idx) {
+      x += d[idx];
     }
     return x;
   }
@@ -45,6 +45,6 @@ int main(){
   //   cout << ans << endl;
   //   ans -= A[i];
   //   ans += N-A[i]-1;
-  // } 
+  // }
   return 0;
 }
