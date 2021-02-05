@@ -1,6 +1,6 @@
 // https://judge.yosupo.jp/problem/point_add_range_sum
 //https://github.com/atcoder/live_library/blob/master/bit.cpp (コード参考)
-// https://algo-logic.info/binary-indexed-tree/ (わかりやすいサイト)
+// https://algo-logic.info/binary-indexed-tree/ (わかりやすいサイト(2次元BIT,区間加算BITなども)
 // feneck treeとも呼ばれる
 #include <bits/stdc++.h>
 
