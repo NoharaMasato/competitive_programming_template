@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 const int MOD=1e9+7;
 using namespace std;
+using ll = long long;
 
 // constexprを使っているのでMODを動的に決めることはできない(modを同的に決めたい時はnoshiさんのブログ↑を参考にする)
 // start
