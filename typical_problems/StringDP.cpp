@@ -1,5 +1,7 @@
-// Longest Common Subsequence 連続していなくても良い
+// 文字列関係のDPまとめ
+// LCS (Longest Common Subsequence) 連続していなくても良い
 // LCS (Longest Common Substring) 連続している必要がある
+// EditDistance(レーベンシュタイン距離)
 #include <bits/stdc++.h>
 
 using ll = long long;
@@ -37,9 +39,29 @@ int LongestCommonSubsequence(string s, string t){
   return dp[N][M];
 }
 
+// https://qiita.com/drken/items/a5e6fe22863b7992efdb (参考)
+// https://onlinejudge.u-aizu.ac.jp/problems/DPL_1_E (答え確認)
+int EditDistance(string s, string t){
+  int N = int(s.size()), M = int(t.size());
+  vector<vector<int>> dp(N+1, vector<int>(M+1, INFint));
+  dp[0][0] = 0;
+  for(int i(0);i<=N;i++){
+    for(int j(0);j<=M;j++){
+      if (i > 0 && j > 0) {
+        if (s[i-1] == t[j-1]) dp[i][j] = dp[i-1][j-1];
+        else dp[i][j] = dp[i-1][j-1] + 1;
+      }
+      if (i > 0) dp[i][j] = min(dp[i][j], dp[i-1][j] + 1);
+      if (j > 0) dp[i][j] = min(dp[i][j], dp[i][j-1] + 1);
+    }
+  }
+  return dp[N][M];
+}
+
 int main(){
   string s = "abcdefg";
   string t = "cdeg";
   cout << "Substring: " << LongestCommonSubstring(s, t) << endl;
   cout << "Subsequence: " << LongestCommonSubsequence(s, t) << endl;
+  cout << "EditDistance: " << EditDistance(s, t) << endl;
 }

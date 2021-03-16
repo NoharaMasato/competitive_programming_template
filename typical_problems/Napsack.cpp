@@ -11,10 +11,10 @@ ll MOD=1e9+7;
 
 ll dp[201][200001] = {0};
 int main(){
-  ll N,W;
+  ll N,W; // N: 荷物の個数, W: 重さの限界値
   cin>>N>>W;
   vector<int> v(N),w(N);
-  bool vflag(true);
+  bool vflag(true); // dpを価値がdpの一列としてやるかどうか
   for(int i(0);i<N;i++){
     cin>>v[i]>>w[i];
     if(v[i] > 1000) vflag = false;
@@ -72,14 +72,12 @@ int main(){
         }
       }
     }
-    ll ans(0);
     for(int i(200000);i>=0;i--){
       if(dp[N][i] <= W){
-        ans = i;
-        break;
+        cout << i << endl;
+        return (0);
       }
     }
-    cout << ans << endl;
   }else{ // dp[i][w] i,wの時のvの最大値
     for(int i(0);i<N;i++){
       for(int j(0);j<=N*1000;j++){
