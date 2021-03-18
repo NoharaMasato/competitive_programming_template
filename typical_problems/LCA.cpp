@@ -25,7 +25,7 @@ void dfs(int now, int par, int d){ //now: 現在の頂点, par: 親の頂点, d:
   }
 }
 
-int lca(int u, int v){ //uとvのlca
+int lca(int u, int v){ //uとvのlca(ノード番号を返す)
   if(depth[u] > depth[v]) swap(u,v);
   for(int k(0);k<MAX_LOG_V;k++){
     if((depth[v] - depth[u]) >> k&1){
@@ -40,6 +40,14 @@ int lca(int u, int v){ //uとvのlca
     }
   }
   return parent[0][u];
+}
+
+int get_dist(int u, int v){ //uとvの最短距離
+  return depth[u] + depth[v] - 2 * depth[lca(u, v)];
+}
+
+bool is_on_path(int u, int v, int a) { // uとvを結ぶ最短距離上にaがあるか
+  return get_dist(u, a) + get_dist(a, v) == get_dist(u, v);
 }
 
 int main(){

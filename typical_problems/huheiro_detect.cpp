@@ -8,6 +8,7 @@ const ll INFll = (ll)1e18+1;
 const int MOD=1e9+7;
 #define printa(x,n) for(int i = 0; i < n; i++){ cout << (x[i]) << " \n"[i==n-1];};
 
+// ノード0からN-1に行く途中で不閉路に入ることができるか(不平路検出かつ、その不平路が0とN-1の間にあるかの確認)
 vector<int> G[2500], Gr[2500];
 bool flag[2500]={0}, flagr[2500]={0}; // flagはノード0から到達できるかどうか, flagrはノードN-1から逆方向に移動して到達できるかどうか
 void dfs(int now){
