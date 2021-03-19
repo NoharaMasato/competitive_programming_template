@@ -12,17 +12,14 @@ int nw[4]={1,-1,0,0},nh[4]={0,0,1,-1};
 
 // gが見つかったら1を返す
 bool dfs(int nowh,int noww){
-  bool result(false);
-  if (s[nowh][noww]=='g') result=true;
+  if (s[nowh][noww]=='g') return true;
   s[nowh][noww]='#';
   for (int i(0);i<4;i++){
     int nextw=noww+nw[i],nexth=nowh+nh[i];
     if (nextw<0||nextw>=W||nexth<0||nexth>=H) continue;
-    if (s[nexth][nextw]!='#'){
-      result |= dfs(nexth,nextw);
-    }
+    if (s[nexth][nextw]!='#' && dfs(nexth, nextw)) return true;
   }
-  return result;
+  return false;
 }
 // end
 

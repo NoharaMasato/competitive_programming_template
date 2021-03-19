@@ -31,11 +31,11 @@ int main(){
       pair<int,int> next = {now.first + ny[i],now.second+nx[i]};
       if (next.first < 0 || next.first >= H || next.second < 0 || next.second >= W) continue;
       if (s[next.first][next.second] != '#'){
-        q.push(next);
         if (s[next.first][next.second] == 'g'){
           cout << "Yes" << endl;
           return 0;
         }
+        q.push(next);
         s[next.first][next.second]='#';
       }
     }
