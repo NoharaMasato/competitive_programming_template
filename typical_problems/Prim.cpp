@@ -5,21 +5,22 @@ using namespace std;
 
 #define INFint 2e9+1
 
+// Prime法(ダイクストラのように小さい辺から順に見ていく)
 int main(){
   int V,E;
   cin>>V>>E;
-  vector<pair<int,int>> G[100001];
+  vector<pair<int,int>> G[100000];
   for(int i(0);i<E;i++){
     int s,t,w;
-    cin>>s>>t>>w;
+    cin>>s>>t>>w; // 入力のノード番号がすでに0-indexed
     G[s].push_back({w,t});
     G[t].push_back({w,s});
   }
-  priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;// cost,to
-  q.push({0,1});
-  vector<bool> visited(V+1,false);
-
   ll sum(0);
+
+  priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;// cost,to
+  q.push({0,0});
+  vector<bool> visited(V,false);
   while(!q.empty()){
     pair<int,int> now = q.top();q.pop();
     if(visited[now.second]) continue;
@@ -32,4 +33,3 @@ int main(){
   cout << sum << endl;
   return 0;
 }
-
