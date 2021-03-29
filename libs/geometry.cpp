@@ -25,6 +25,9 @@ public:
   P operator * (T d) {
     return P(x*d, y*d);
   }
+  P operator / (T d) {
+    return P(x/d, y/d);
+  }
   bool operator == (P p) {
     return (x == p.x && y == p.y);
   }
@@ -70,6 +73,11 @@ double point_to_line_distance(P<int> p1, P<int> p2, P<int> p){ // point to line 
 // 点p1,p2を結ぶ線分と点pの最短距離
 double point_to_line_segment_distance(P<int> p1, P<int> p2, P<int> p){
 
+}
+
+// 点pを原点を中心に時計回りにang(ラジアン)回転させる
+P<double> rotate(P<double> p, double ang) {
+  return P<double>(p.x * cos(ang) - p.y * sin(ang), p.x * sin(ang) + p.y * cos(ang));
 }
 
 int main(){

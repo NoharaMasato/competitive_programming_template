@@ -34,16 +34,14 @@ int main(){
   while(st.size() != 0){
     int now = st.top();st.pop();
     dag.push_back(now);
-    for(auto& j: G[now]) {
-      //隣接する頂点の入次数をマイナス1
-      h[j]--;
-      //これによって入次数が0になればstに追加
-      if(h[j] == 0) st.push(j);
+    for(int j: G[now]) {
+      h[j]--; //隣接する頂点の入次数をマイナス1
+      if(h[j] == 0) st.push(j); //これによって入次数が0になればstに追加
     }
   }
-  for(int i(1);i<=N;i++){
-    cout << dag[i] << " ";
-  }
+  // dagのサイズがノード数と同じであれば、DAGであり、閉路が存在しない
+  for(int v:dag) cout << v << " ";
+  cout << endl;
   cout << endl;
   return 0;
 }
