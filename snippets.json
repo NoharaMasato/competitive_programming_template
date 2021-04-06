@@ -75,6 +75,13 @@
       "prefix": "modint",
       "snippets_file": "modint.cpp",
       "description": "modint"
+    },
+    {
+      "type" : "cpp",
+      "name": "segtree",
+      "prefix": "segtree",
+      "snippets_file": "SegmentTree.cpp",
+      "description": "SegmentTree"
     }
   ]
 }

@@ -6,13 +6,14 @@ using ll = long long;
 using namespace std;
 #define INFint 2e9+1
 
+// start
 template <typename T>
 struct SegmentTree {
   int n;
   vector<T> node;
-  using FX = function<T(T, T)>; // X•X -> X となる関数の型
+  using FX = function<T(T, T)>; // T•T -> T となる関数の型
   FX fx;
-  const T ex;
+  const T ex; // 単位元(RMQの時はex=INFint)
 
   // 元配列 v をセグメント木で表現する
   SegmentTree(vector<T> v, FX fx_, T ex_): fx(fx_), ex(ex_) {
@@ -40,6 +41,9 @@ struct SegmentTree {
     T vr = query_sub(a, b, k * 2 + 2, (l + r) / 2, r);
     return fx(vl, vr);
   }
+  T get(int x) { // もとの配列のx番目(0-indexed)の値を返す
+    return node[x + n - 1];
+  }
   void print(){ // 最下段[n-1,2n-1)のn個を出力する
     for(int i(0); i < n; i++) cout << node[i + n - 1] << " ";
     cout << endl;
@@ -49,6 +53,7 @@ struct SegmentTree {
     cout << endl;
   }
 };
+// end
 
 // 一例として、RMQをとく
 // https://judge.yosupo.jp/problem/staticrmq
