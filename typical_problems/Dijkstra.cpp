@@ -21,14 +21,14 @@ int main(){
     }
   }
   vector<int> d(N,INFint); //各頂点の最小値を入れる配列
-  // first: cont, second: node number 
+  // first: cont, second: node number
   priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
   int start = 0;
   d[start] = 0;
   q.push({0,start});
 
   while(!q.empty()){
-    pair<int,int> p = q.top();q.pop();                                                  
+    pair<int,int> p = q.top();q.pop();
     int v = p.second;
     if(d[v] < p.first) continue;
     for (int i(0);i<int(G[v].size());i++){

@@ -1,7 +1,0 @@
-{
-  "prefix": "rfo",
-  "body": [
-    "for(int $1($2);$1>=0;$1--)"
-  ],
-  "description": "for snippet"
-}
